@@ -1,0 +1,91 @@
+This repository has scripts and processed data for "A suite of rare microbes interacts with a dominant, heritable, fungal endophyte to influence plant trait expression"
+
+Raw sequence data are hosted by the University of Wyoming. MiSeq data used during preliminary work for this experiment can be found at: \url{https://doi.org/10.15786/r9xy-6x03} while  NovaSeq data analyzed herein can be found at: \url{https://hdl.handle.net/20.500.11919/7166}
+
+Script explanations:
+
+Afulva_LtauricaVsTreatment.R - Comparison of A. fulva and L. taurica among groups
+Afulva_vs_traits_LM.R - A. fulva and trait variation. Analysis not in manuscript
+CNVRG_analysisJOINED.R - CNVRG analysis of ITS data
+CNVRG_analysis_16S.R - CNVRG analysis of 16S data
+CulturingAnalysisPlotting.R - figures and analysis of culture data
+DiversityDescription.R - Characterization of patterns in biodiversity among groups
+Fig1_Bayesian* - Script to make figure 1 and associated analysis of trait variation among groups
+Fig_effectofInoculation - Determine effects of inoculation in terms of microbial abundance
+PhenologyFisherTest.R - Fisher Test of phenology and aphid presence
+asle_microbiome_manipulation.Rproj - R project 
+checkForCrossCrontamination.R - use coligos to check for cross-contamination
+comparePCRduplicates - examination of PCR duplicates
+examining_abund_bacteria_vs_treatment.R - examine abundant bacteria vs. treatment
+inoculumDescription.R - characterize what is in the inoculum
+ml_rich.R - characterize richness in the data, not used in main text
+mockCommunity_processing.R - analysis of mock community data
+modeling_rare_taxa.R - Look into rare taxa among treatments
+ordination_permanova.R - PCoA and permanova analyses
+piBayesianRichnessEstimationAnalysis.R - diversity entropy calculation and plotting
+powderyMildewPlot_analysis - mildew analysis
+rich_div_vs_traits* - linear model linking diversity to fungi or bacteria, depending on script.
+summarystats_planttraits.R - Summary of plant trait data
+wrangling.R - wrangle the data
+yeartwoVolumeVsTreatment.R - year two plant size data
+
+
+oldscripts/
+
+Best to ignore these scripts. I am keeping these for completeness sake and they should not be used.
+
+visuals/ 
+Contains various figures used for this study. Most figures are self-explanatory and the useful ones are all in the text.
+
+%%%%%%%%%%%%%
+data/
+
+Throughout 'conservative' refers to data that was cleaned to omit plants for which treatment failed.
+'ml' - refers to max. likelihood, which I use as shorthand to refer to point estimates of posterior prob. distributions. 
+
+16s_conservative_p.Rdata 		- 16s multinomial p data
+AsleBoxMeasurementsEndofSeason.csv 	- self-explanatory	
+CNkey.csv				- information linking C and N data to sample, from biogeochem lab
+CNmeasurements.csv			-C and N raw data
+Culturing_xp_results.csv		-Culturing results
+DNAquants - Sheet1.csv			-Dna concentrations for each sample
+NovaSeq2_DemuxJH.csv			-Demultiplexing key for NovaSeq data
+Sample_Well_Key_includesQuants.csv	-Sample to 96 well plate key
+SwainsonineMg_JHarrison.csv		-Swainsonine data
+afulvaMatchesITSCOMBO			-taxa that matched A. fulva
+all_16S_OTUs_inoculum_NS_and_Miseq_NAMES_OF_OTUS_NOTSAME_AS_NS.fasta -16s otus in the inoculum. OTU names do not match novaseq data as these were processed indepently			
+all_ITS_OTUs_inoculum_NS_and_MiseqNAMES_OF_OTUS_NOTSAME_AS_NS.fasta	-see above note, this is the same but for ITS		
+alternaria_fulva.fasta			-reference sequence for A. fulva
+bacterial_contams.csv			-bacterial contaminants
+coligoTableASLE				-coligo OTU table
+diffs_16S.csv				-differential rel. abund results for 16s
+diffs_16S_conservative.csv		-see above, for conservative data set
+diffs_ITS.csv				-See above for ITS
+diffs_table_16S_cons.csv		-see above, but in table format
+diffs_table_ITS_cons.csv		-see above
+entropy_p_bacteria.RData		-Entropy calculations for bacteria and multinomial data
+entropy_p_bacteria_conservative.RData	-see above
+entropy_p_fungi.RData			-see above, but for fungi
+entropy_p_fungi_conservative.RData	-see above
+fungal_contams.csv			-fungal contaminants
+its_conservative_p.Rdata		-ITS conservative multinomial values
+levtaurMatchesITS			-L. taurica matches
+linking_16S_inoculumOTUs_to_NOVAseqOTUS	-links 16s OTU names from the inoculum data to the OTU names from the NOVAseq data
+linking_ITS_inoculumOTUs_to_NOVAseqOTUS - see above, but for fungi
+ml_p_table_16s.csv			-ml multinomial p table for 16s
+ml_p_table_16s_conservative.csv		-see above
+ml_p_table_COMBO_ITS.csv		-see above, but for fungi. COMBO means this was the final ITS dataset that included concatenated and merged reads
+ml_p_table_COMBO_ITS_conservative.csv	-see above
+novaseqotusIn_inoculum			-self-explanatory
+otutable16S_gg_cpDNAmtDNAISDduds_sum	-otu table for 16s data with cpDNA, mtDNA, ISD summed. The duds refer to OTUs not assigned a taxonomy
+otutableFWD_ISD_ASLE_duds_sum		-See above was just for fwd reads of ITS
+otutableJOINED_ISD_ASLE_AFULVA_sum	-see above, otu table for fungi, including merged and joined data. This is the one to view
+otutableJOINED_ISD_ASLE_duds_sum	-see above, also useful if one wants to see counts for each A. fulva otu
+planting_order.csv			-useful key explaining treatment for each plant
+size2ndyear2018.csv			-size in 2018
+sla.csv					-Specific leaf area data
+suspectSamples.csv			-plants that were odd
+tax_gg16S.sintax			-taxonomy for 16s from greengenes
+tax_uniteJOINED.sintax			-taxonomy for UNITE for ITS
+tax_uniteJOINED_fungiOnly.sintax	-see above, but for only fungi
+trait_and_treatment_data.csv		-IMPORTANT, this has most of the trait and treatment data for each plant. Start here.

@@ -1,0 +1,11 @@
+centroid=Otu10;seqs=1;size=21	Otu15	100.0	301	0	0	1	301	1	301	-1	0
+centroid=Otu10;seqs=1;size=21	Otu2	99.7	301	1	0	1	301	1	301	-1	0
+centroid=Otu10;seqs=1;size=21	Otu5	99.7	301	1	0	1	301	1	301	-1	0
+centroid=Otu13;seqs=1;size=5	Otu5	100.0	301	0	0	1	301	1	301	-1	0
+centroid=Otu13;seqs=1;size=5	Otu15	99.7	301	1	0	1	301	1	301	-1	0
+centroid=Otu1;seqs=330;size=15033	Otu118	99.5	218	0	1	1	217	1	218	-1	0
+centroid=Otu12;seqs=1;size=11	Otu2	100.0	301	0	0	1	301	1	301	-1	0
+centroid=Otu12;seqs=1;size=11	Otu15	99.7	301	1	0	1	301	1	301	-1	0
+centroid=Otu12;seqs=1;size=11	Otu5	99.3	301	2	0	1	301	1	301	-1	0
+centroid=Otu18;seqs=1;size=2	Otu1	100.0	295	0	0	1	295	1	295	-1	0
+centroid=Otu3;seqs=109;size=3164	Otu127	100.0	248	0	0	1	248	1	248	-1	0

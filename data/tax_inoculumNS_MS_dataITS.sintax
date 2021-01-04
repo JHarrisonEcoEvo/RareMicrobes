@@ -1,0 +1,20 @@
+centroid=Otu10;seqs=1;size=21				
+centroid=Otu12;seqs=1;size=11				
+centroid=Otu13;seqs=1;size=5				
+centroid=Otu16;seqs=1;size=3				
+centroid=Otu14;seqs=1;size=4	d:Fungi(1.00),p:Ascomycota(1.00),c:Pezizomycetes(1.00),o:Pezizales(1.00)	+	d:Fungi,p:Ascomycota,c:Pezizomycetes,o:Pezizales
+centroid=Otu1;seqs=330;size=15033	d:Fungi(1.00)	+	d:Fungi
+Otu91	d:Fungi(1.00)	+	d:Fungi
+centroid=Otu4;seqs=72;size=1791	d:Fungi(1.00),p:Ascomycota(0.76),c:Dothideomycetes(0.59),o:Dothideales(0.59),f:Aureobasidiaceae(0.56),g:Aureobasidium(0.36),s:Aureobasidium_leucospermi_SH2150008.08FU(0.18)	+	d:Fungi
+centroid=Otu9;seqs=5;size=59	d:Fungi(1.00),p:Ascomycota(0.75),c:Dothideomycetes(0.72),o:Pleosporales(0.67),f:Leptosphaeriaceae(0.50),g:Plenodomus(0.44)	+	d:Fungi
+centroid=Otu11;seqs=1;size=13	d:Fungi(1.00)	+	d:Fungi
+centroid=Otu2;seqs=238;size=9410	d:Fungi(1.00),p:Basidiomycota(0.58),c:Tremellomycetes(0.58),o:Holtermanniales(0.58),f:Holtermanniales_fam_Incertae_sedis(0.58),g:Holtermanniella(0.58),s:Holtermanniella_takashimae_SH1610809.08FU(0.58)	+	d:Fungi
+centroid=Otu18;seqs=1;size=2	d:Fungi(1.00),p:Ascomycota(1.00),c:Leotiomycetes(1.00),o:Erysiphales(1.00),f:Erysiphaceae(1.00),g:Leveillula(1.00),s:Leveillula_taurica_SH1525617.08FU(1.00)	+	d:Fungi,p:Ascomycota,c:Leotiomycetes,o:Erysiphales,f:Erysiphaceae,g:Leveillula,s:Leveillula_taurica_SH1525617.08FU
+centroid=Otu5;seqs=17;size=640	d:Fungi(1.00),p:Ascomycota(1.00),c:Dothideomycetes(1.00),o:Dothideales(1.00),f:Dothideaceae(0.99),g:Endoconidioma(0.99),s:Endoconidioma_populi_SH1515066.08FU(0.99)	+	d:Fungi,p:Ascomycota,c:Dothideomycetes,o:Dothideales,f:Dothideaceae,g:Endoconidioma,s:Endoconidioma_populi_SH1515066.08FU
+centroid=Otu7;seqs=7;size=181	d:Fungi(1.00),p:Ascomycota(1.00),c:Sordariomycetes(0.99),o:Xylariales(0.97)	+	d:Fungi,p:Ascomycota,c:Sordariomycetes,o:Xylariales
+centroid=Otu8;seqs=7;size=142	d:Fungi(1.00)	+	d:Fungi
+centroid=Otu17;seqs=1;size=2	d:Fungi(1.00),p:Ascomycota(0.87),c:Dothideomycetes(0.64),o:Dothideales(0.64),f:Aureobasidiaceae(0.62)	+	d:Fungi,p:Ascomycota
+centroid=Otu3;seqs=109;size=3164	d:Fungi(1.00),p:Ascomycota(0.98),c:Eurotiomycetes(0.97),o:Eurotiales(0.97),f:Aspergillaceae(0.97),g:Penicillium(0.97),s:Penicillium_jensenii_SH2189915.08FU(0.50)	+	d:Fungi,p:Ascomycota,c:Eurotiomycetes,o:Eurotiales,f:Aspergillaceae,g:Penicillium
+centroid=Otu15;seqs=1;size=3	d:Fungi(1.00),p:Ascomycota(0.96),c:Eurotiomycetes(0.96),o:Eurotiales(0.96),f:Aspergillaceae(0.93),g:Penicillium(0.93)	+	d:Fungi,p:Ascomycota,c:Eurotiomycetes,o:Eurotiales,f:Aspergillaceae,g:Penicillium
+centroid=Otu6;seqs=24;size=398	d:Fungi(1.00),p:Ascomycota(1.00),c:Eurotiomycetes(1.00),o:Eurotiales(1.00),f:Aspergillaceae(1.00),g:Aspergillus(1.00)	+	d:Fungi,p:Ascomycota,c:Eurotiomycetes,o:Eurotiales,f:Aspergillaceae,g:Aspergillus
+centroid=Otu19;seqs=1;size=2	d:Fungi(1.00),p:Ascomycota(0.99),c:Eurotiomycetes(0.99),o:Eurotiales(0.99),f:Aspergillaceae(0.99),g:Penicillium(0.97),s:Penicillium_jensenii_SH2189915.08FU(0.52)	+	d:Fungi,p:Ascomycota,c:Eurotiomycetes,o:Eurotiales,f:Aspergillaceae,g:Penicillium
