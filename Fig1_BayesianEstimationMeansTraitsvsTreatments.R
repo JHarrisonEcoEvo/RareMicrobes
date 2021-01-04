@@ -1033,6 +1033,8 @@ controlPloter(ypos = 0.19,
 
 dat$X..Swainsonine <- as.character(dat$X..Swainsonine)
 dat$X..Swainsonine[which(dat$X..Swainsonine=="#VALUE!")] <- 0
+#one failed plant was not removed
+dat <- dat[-which(as.numeric(dat$X..Swainsonine) > 0 & dat$treament == "treated_controlneg"),]
 
 stripchart(as.numeric(dat$X..Swainsonine)~dat$treament,
            vertical = TRUE, 
