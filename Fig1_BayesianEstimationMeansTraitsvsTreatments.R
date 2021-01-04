@@ -216,16 +216,16 @@ dat$vol <- dat$width*dat$height*dat$Length
 dat_vol <- dat[-which(is.na(dat$width)),]
 start <- indexer(dat_vol$treament)[[1]]
 end <- indexer(dat_vol$treament)[[2]]
-out <- modelRun(log(dat_vol$vol), start, end)
+out <- modelRun(dat_vol$vol, start, end)
 
-out_mat[1,] <- "Size" 
+out_mat[1,] <- c("Size",
                  paste(round(unlist(out$means),2),
                        " (",
                        round(sapply(out$quantiles, "[[", 1), 2),
                        ",",
                        round(sapply(out$quantiles, "[[", 3), 2),
                        ")", 
-                       sep="")
+                       sep=""))
 
 cv <- coefvar(x = out$tau, y = out$mu)
 
