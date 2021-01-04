@@ -1,5 +1,7 @@
 library(rjags)
 dat <- read.csv("data/trait_and_treatment_data.csv")
+dat <- dat[dat$treatment_failed == "no",]
+
 dat$lvs_with_fungus[which(is.na(dat$lvs_with_fungus))] <- 0
 #Remove dead plants
 dat <- dat[-which(is.na(dat$X.LeavesCollection)),]
@@ -63,7 +65,7 @@ boxplot(dat$lvs_with_fungus / dat$X.LeavesCollection ~ dat$treament,
                   expression(paste("Inoc. treated, ", italic('A. fulva -'),sep="")),
                   expression(paste("Inoc. treated, ", italic('A. fulva +'),sep="")),
                   expression(paste("No inoculum, ", italic('A. fulva -'),sep="")),
-                  expression(paste("No inoculum, ", italic('A. fulva -'),sep="")))
+                  expression(paste("No inoculum, ", italic('A. fulva +'),sep="")))
 )
 
 dev.off()
