@@ -1,5 +1,7 @@
 
 dat <- read.csv("./data/trait_and_treatment_data.csv", header = T)
+dat <- dat[dat$treatment_failed == "no",]
+
 size2018 <- read.csv("./data/size2ndyear2018.csv")
 size2018$vol <- size2018$height * size2018$width * size2018$length
 dat2 <- merge(dat, size2018, by.y = "plant", by.x = "plant", all.x = T)
@@ -70,7 +72,7 @@ axis(1,
                 expression(paste("Inoc. treated, ", italic('A. fulva -'),sep="")),
                 expression(paste("Inoc. treated, ", italic('A. fulva +'),sep="")),
                 expression(paste("No inoculum, ", italic('A. fulva -'),sep="")),
-                expression(paste("No inoculum, ", italic('A. fulva -'),sep=""))), 
+                expression(paste("No inoculum, ", italic('A. fulva +'),sep=""))), 
      at = c(1,2,3,4,5,6,7,8))
 axis(2,las=2)
 title(ylab=expression(paste("Plant volume (c",m^3,") year two",sep="")), cex.lab=2, line=3.7,xpd = NA)
