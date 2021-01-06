@@ -330,6 +330,7 @@ return(list( intercept = results(sim.mod.sam$mu,8),
 #Beta coefficients correspond to volume, sla, N, C, NDFA, and the intercept is last
 #Impute data that is missing. 
 dat5 <- dat4
+library(randomForest)
 test <- rfImpute(x = dat5[,5:11], y = dat5$shannon)
 dat5[,5:11] <- test[,2:8]
 
