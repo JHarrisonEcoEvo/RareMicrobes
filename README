@@ -20,7 +20,6 @@ examining_abund_bacteria_vs_treatment.R - examine abundant bacteria vs. treatmen
 inoculumDescription.R - characterize what is in the inoculum
 ml_rich.R - characterize richness in the data, not used in main text
 mockCommunity_processing.R - analysis of mock community data
-modeling_rare_taxa.R - Look into rare taxa among treatments
 ordination_permanova.R - PCoA and permanova analyses
 piBayesianRichnessEstimationAnalysis.R - diversity entropy calculation and plotting
 powderyMildewPlot_analysis - mildew analysis

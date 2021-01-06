@@ -61,7 +61,8 @@ tax[grep("Otu20;", tax$V1),]
 #############################
 rm(list=ls())
 metadata <- read.csv("./data/trait_and_treatment_data.csv",stringsAsFactors = F, header = T)
-  
+metadata <- metadata[metadata$treatment_failed == "no",]
+
 dat <- read.csv("./data/ml_p_table_16s_conservative.csv",stringsAsFactors = F, header = T)
 head(dat)
 names(dat) <- gsub("\\.","=", names(dat))
@@ -243,7 +244,7 @@ dev.off()
 #############################
 rm(list=ls())
 metadata <- read.csv("./data/trait_and_treatment_data.csv",stringsAsFactors = F, header = T)
-
+metadata <- metadata[metadata$treatment_failed == "no",]
 dat <- read.csv("./data/ml_p_table_COMBO_ITS_conservative.csv",stringsAsFactors = F, header = T)
 head(dat)
 names(dat) <- gsub("\\.","=", names(dat))

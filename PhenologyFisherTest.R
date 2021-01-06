@@ -1,4 +1,6 @@
 dat <- read.csv("data/trait_and_treatment_data.csv")
+dat <- dat[dat$treatment_failed == "no",]
+
 flowering <- table(dat$Flowering.,dat$treament)[,5:8]
 
 fisher.test(cbind(c(9,32),

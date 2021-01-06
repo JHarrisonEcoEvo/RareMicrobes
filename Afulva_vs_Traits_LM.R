@@ -7,7 +7,7 @@ dat2 <- read.csv("./data/ml_p_table_COMBO_ITS_conservative.csv", stringsAsFactor
 #Bring in trait data
 #Bring in trait data
 dat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
-
+dat <- dat[dat$treatment_failed=="no",]
 dat <- merge(dat, dat2, by.x = "plant", by.y = "sample")
 
 dat <- dat[match(dat2$sample,dat$plant),]

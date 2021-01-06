@@ -45,7 +45,7 @@ for(i in 1:length(dat2[,1])){
 
 #merge with treatment data
 dat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
-
+dat <- dat[dat$treatment_failed == "no",]
 dat <- merge(dat, dat2, by.x = "plant", by.y = "sample")
 
 dat <- dat[match(dat2$sample,dat$plant),]
@@ -112,7 +112,7 @@ for(i in 1:length(dat2[,1])){
 }
 
 dat1 <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
-
+dat1 <- dat1[dat1$treatment_failed == "no",]
 dat1 <- merge(dat1, dat2, by.x = "plant", by.y = "sample")
 
 dat1 <- dat1[match(dat2$sample,dat1$plant),]
@@ -169,7 +169,7 @@ dev.off()
 otus <- read.table("./data/otutableJOINED_ISD_ASLE_AFULVA_sum", stringsAsFactors = F, header = T)
 
 metadat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
-
+metadat <- metadat[metadat$treatment_failed == "no",]
 metadat <- metadat[order(metadat$treament),]
 treatment <- metadat$treament
 

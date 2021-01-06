@@ -30,6 +30,8 @@ dim(dat)
 inocula <- read.table("./data/linking_ITS_inoculumOTUs_to_NOVAseqOTUS", stringsAsFactors = F, header = F)
 traits <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F, header = T)
 traits <- traits[!duplicated(traits$plant),]
+traits <- traits[traits$treatment_failed == "no",]
+
 #merge ml with treatment
 dim(dat)
 merge_dat <- merge(dat, traits[,c(1,33)], by.x = "dat.sample", by.y = "plant", all.x = T)
@@ -245,6 +247,8 @@ inocula <- read.table("./data/linking_16S_inoculumOTUs_to_NOVAseqOTUS", stringsA
 length(unique(inocula$V1)) #206 taxa with 13823 matches?
 traits <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F, header = T)
 traits <- traits[!duplicated(traits$plant),]
+traits <- traits[traits$treatment_failed == "no",]
+
 #merge ml with treatment
 dim(dat)
 merge_dat <- merge(dat, traits[,c(1,33)], by.x = "dat.sample", by.y = "plant", all.x = T)

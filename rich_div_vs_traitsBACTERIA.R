@@ -56,6 +56,8 @@ simps <- unlist(lapply(entropy_p_simps, FUN = mean))
 
 #Bring in trait data and merge with diversity data
 dat5 <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
+dat5 <- dat5[dat5$treatment_failed=="no",]
+
 #ensure the data are in the same order as those modeled.
 
 dat5 <- dat5[match(t_newdat$metadat.plant,dat5$plant),]

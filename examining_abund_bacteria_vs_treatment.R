@@ -1,7 +1,7 @@
 rm(list=ls())
 dat <- read.csv("./data/ml_p_table_16s_conservative.csv")
 metadat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
-
+metadat<- metadat[metadat$treatment_failed=="no",]
 contam <- read.csv("./data/bacterial_contams.csv", stringsAsFactors = F)
 dat <- dat[,-which(names(dat) %in% gsub("=","\\.", contam$x))]
 

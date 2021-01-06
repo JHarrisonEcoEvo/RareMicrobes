@@ -1,6 +1,7 @@
 library(rjags)
-
+rm(list=ls())
 newdat <- read.csv("./data/trait_and_treatment_data.csv")
+newdat <- newdat[newdat$treatment_failed=="no",]
 
 #Function from Mage
 add.alpha <- function(col, alpha=1){
@@ -21,7 +22,6 @@ aggregate(newdat$morphospecies_not_counting_Undifilum ~ newdat$treament, FUN = m
 #plot morphospecies
 stripchart(newdat$morphospecies_not_counting_Undifilum ~ newdat$treament,
            vertical = TRUE,
-           data = dat,
            method = "jitter",
            pch = 20,
            bty = "n",
@@ -58,7 +58,6 @@ mtext("a)", side = 2,
 #Plot percentage colonization
 stripchart(newdat$notAlfuInfected/newdat$num_leaf_segments ~ newdat$treament,
            vertical = TRUE,
-           data = dat,
            method = "jitter",
            pch = 20,
            col = add.alpha("gray", alpha = 0.8),
@@ -94,7 +93,6 @@ mtext("b)", side = 2,
 #Plot A. fulva colonization
 stripchart(newdat$Undifilum/newdat$num_leaf_segments ~ newdat$treament,
            vertical = TRUE,
-           data = dat,
            method = "jitter",
            pch = 20,
            col = add.alpha("gray", alpha = 0.8),
@@ -286,7 +284,8 @@ quantile(sim.mod.sam$delta58, probs = c(0.05,0.5,0.95))
 quantile(sim.mod.sam$delta67, probs = c(0.05,0.5,0.95))
 quantile(sim.mod.sam$delta68, probs = c(0.05,0.5,0.95))
 
-
+sim.mod.sam <- modeler(newdat$Undifilum,
+                       starts = indices$starts, ends =indices$ends)
 
 
 # #Plot A. fulva colonization
@@ -307,9 +306,9 @@ quantile(sim.mod.sam$delta68, probs = c(0.05,0.5,0.95))
 #            ,frame.plot=F
 # )
 # 
-# boxplot(newdat$Undifilum/newdat$num_leaf_segments ~ newdat$treament, 
-#         las = 2, 
-#         col= c(NA, NA, 
+# boxplot(newdat$Undifilum/newdat$num_leaf_segments ~ newdat$treament,
+#         las = 2,
+#         col= c(NA, NA,
 #                add.alpha("light gray", alpha=0.6),
 #                add.alpha("light gray", alpha=0.6),
 #                add.alpha("light gray", alpha=0.6),
@@ -317,7 +316,7 @@ quantile(sim.mod.sam$delta68, probs = c(0.05,0.5,0.95))
 #                NA,NA),
 #         add = T,
 #         frame.plot=F,
-#         outline = F, 
+#         outline = F,
 #         names = c(
 #                   "Treated - ",
 #                   "Treated +",

@@ -2,6 +2,7 @@ rm(list=ls())
 library(rjags)
 dat <- read.csv("./data/ml_p_table_COMBO_ITS_conservative.csv")
 metadat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
+metadat <- metadat[metadat$treatment_failed=="no",]
 afulva <- read.table("data/afulvaMatchesITSCOMBO", stringsAsFactors=F, header = F) 
 #contam <- read.csv("./data/fungal_contams.csv", stringsAsFactors = F)
 #contam$x  %in% afulva$V1
@@ -300,6 +301,8 @@ dev.off()
 #bacteria
 dat <- read.csv("./data/ml_p_table_16s_conservative.csv")
 metadat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
+metadat <- metadat[metadat$treatment_failed=="no",]
+
 contam <- read.csv("./data/bacterial_contams.csv", stringsAsFactors = F)
 
 dat <- dat[,-c(300,588)]

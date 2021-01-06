@@ -68,6 +68,7 @@ simps <- unlist(lapply(entropy_p_simps, FUN = mean))
 
 #Bring in trait data
 dat <- read.csv("./data/trait_and_treatment_data.csv", stringsAsFactors = F)
+dat <- dat[dat$treatment_failed=="no",]
 
 dat <- dat[match(t_newdat$metadat.plant,dat$plant),]
 
