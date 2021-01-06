@@ -218,6 +218,8 @@ start <- indexer(dat_vol$treament)[[1]]
 end <- indexer(dat_vol$treament)[[2]]
 out <- modelRun(dat_vol$vol, start, end)
 
+boxplot(log(dat_vol$vol)~dat_vol$treament)
+
 out_mat[1,] <- c("Size",
                  paste(round(unlist(out$means),2),
                        " (",
@@ -244,7 +246,7 @@ for(i in 1:4){
 dat_leaves <- dat[-which(is.na(dat$X.LeavesCollection)),]
 start <- indexer(dat_leaves$treament)[[1]]
 end <- indexer(dat_leaves$treament)[[2]]
-out <- modelRun(dat$X.LeavesCollection, start, end)
+out <- modelRun(dat_leaves$X.LeavesCollection, start, end)
 out_mat[2,] <- c("Leaves", 
                  paste(round(unlist(out$means),2),
                        " (",
@@ -270,7 +272,7 @@ for(i in 1:4){
 dat_leafarea <- dat[-which(is.na(dat$leafarea_avg)),]
 start <- indexer(dat_leafarea$treament)[[1]]
 end <- indexer(dat_leafarea$treament)[[2]]
-out <- modelRun(dat$leafarea_avg, start, end)
+out <- modelRun(dat_leafarea$leafarea_avg, start, end)
 out_mat[3,] <- c("Leaf area",  
                  paste(round(unlist(out$means),2),
                        " (",
@@ -279,7 +281,7 @@ out_mat[3,] <- c("Leaf area",
                        round(sapply(out$quantiles, "[[", 3), 2),
                        ")", 
                        sep=""))
-
+boxplot(dat$leafarea_avg~dat$treament)
 cv <- coefvar(x = out$tau, y = out$mu)
 
 out_mat_var[3,1] <- "Leaf area"
@@ -298,7 +300,7 @@ for(i in 1:4){
 dat_sla <- dat[-which(is.na(dat$sla_avg)),]
 start <- indexer(dat_sla$treament)[[1]]
 end <- indexer(dat_sla$treament)[[2]]
-out <- modelRun(dat$sla_avg, start, end)
+out <- modelRun(dat_sla$sla_avg, start, end)
 out_mat[4,] <- c("SLA", 
                  paste(round(unlist(out$means),2),
                        " (",
@@ -325,7 +327,7 @@ for(i in 1:4){
 dat_15 <- dat[-which(is.na(dat$d15N....vs..air.)),]
 start <- indexer(dat_15$treament)[[1]]
 end <- indexer(dat_15$treament)[[2]]
-out <- modelRun(dat$d15N....vs..air., start, end)
+out <- modelRun(dat_15$d15N....vs..air., start, end)
 out_mat[5,] <- c("delta N15", 
                  paste(round(unlist(out$means),2),
                        " (",
@@ -420,7 +422,7 @@ for(i in 1:4){
 dat_percC <- dat[-which(is.na(dat$percC)),]
 start <- indexer(dat_percC$treament)[[1]]
 end <- indexer(dat_percC$treament)[[2]]
-out <- modelRun(dat$percC, start, end)
+out <- modelRun(dat_percC$percC, start, end)
 out_mat[8,] <- c("% C",  
                  paste(round(unlist(out$means),2),
                        " (",
@@ -462,7 +464,7 @@ for(i in 1:4){
 dat_ndfa <- dat[-which(is.na(dat$ndfa)),]
 start <- indexer(dat_ndfa$treament)[[1]]
 end <- indexer(dat_ndfa$treament)[[2]]
-out <- modelRun(dat$ndfa, start, end)
+out <- modelRun(dat_ndfa$ndfa, start, end)
 out_mat[9,] <- c("NDFA",
                  paste(round(unlist(out$means),2),
                        " (",
@@ -551,7 +553,7 @@ boxplot(log(dat$vol) ~ droplevels(dat$treament),
         col=add.alpha(colz, alph = 0.5),
         ylab=""
 )
-text(c("a","b","a","b"),
+text(c("a","ab","a","b"),
      x = c(1,2,3,4),
      y = c(13),
      cex = 1.2,
@@ -672,7 +674,7 @@ boxplot(dat$leafarea_avg ~ droplevels(dat$treament),
         ylab=""
 )
 
-text(c("a","a","b","ab"),
+text(c("a","b","ab","ab"),
      x = c(1,2,3,4),
      y = 0.9,
      cex = 1.2,
@@ -709,7 +711,7 @@ boxplot(dat$sla_avg ~ droplevels(dat$treament),
         col=add.alpha(colz, alph = 0.5),
         ylab=""
 )
-text(c("a","b","a","a"),
+text(c("ab","a","b","ab"),
      x = c(1,2,3,4),
      y = 0.2,
      cex = 1.2,
@@ -825,7 +827,7 @@ boxplot(dat$d15N....vs..air. ~ droplevels(dat$treament),
         col=add.alpha(colz, alph = 0.5),
         ylab=""
 )
-text(c("a","b","b","b"),
+text(c("a","ab","ab","b"),
      x = c(1,2,3,4),
      y = 6,
      cex = 1.2,
@@ -868,7 +870,7 @@ text(c("","","",""),
      font = 2,
      xpd = NA)
 
-axis(1,las=2, labels = c("","","",""), at = c(1,2,3,4))
+axis(1,las=2, labels = c("a","ab","ab","b"), at = c(1,2,3,4))
 axis(2,las=2)
 title(ylab="NDFA", cex.lab=1.5, line=2.8)
 
