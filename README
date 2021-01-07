@@ -67,7 +67,8 @@ entropy_p_bacteria_conservative.RData	-see above
 entropy_p_fungi.RData			-see above, but for fungi
 entropy_p_fungi_conservative.RData	-see above
 fungal_contams.csv			-fungal contaminants
-its_conservative_p.Rdata		-ITS conservative multinomial values
+inoculum_otus_16S.csv - sequences and taxonomic hypotheses for OTUs in the inoculum that were bacteria
+inoculum_otus_ITS.csv - see previous, but for fungi.
 levtaurMatchesITS			-L. taurica matches
 linking_16S_inoculumOTUs_to_NOVAseqOTUS	-links 16s OTU names from the inoculum data to the OTU names from the NOVAseq data
 linking_ITS_inoculumOTUs_to_NOVAseqOTUS - see above, but for fungi
@@ -88,3 +89,5 @@ tax_gg16S.sintax			-taxonomy for 16s from greengenes
 tax_uniteJOINED.sintax			-taxonomy for UNITE for ITS
 tax_uniteJOINED_fungiOnly.sintax	-see above, but for only fungi
 trait_and_treatment_data.csv		-IMPORTANT, this has most of the trait and treatment data for each plant. Start here.
+
+Other data is for internal use and likely would not be of interest to viewers. These data are retained in the event reanalysis is needed.
